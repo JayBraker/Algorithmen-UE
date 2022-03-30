@@ -68,19 +68,19 @@ class UPNCalc {
 	}
 
 	public void interactive() {
-		Scanner in=new Scanner(System.in);
+		Scanner in = new Scanner(System.in);
 		String z = "";
 		while (true) {
-		z = in.nextLine();
-		if (z.equals("quit")) {
-			break;
+			z = in.nextLine();
+			if (z.equals("quit")) {
+				break;
+			}
+			if (z.equals("clear")) {
+				mapVars.clear();
+			}
+			System.out.println("task '"+z+"' => "+analyze(z));
 		}
-		if (z.equals("clear")) {
-			mapVars.clear();
-		}
-		System.out.println("task '"+z+"' => "+analyze(z));
 	}
-}
 
 	public static void main(String[] args) {
 		Calc c = new Calc();
